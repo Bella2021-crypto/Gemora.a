@@ -1,13 +1,10 @@
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 import Link from 'next/link';
 
 export async function getServerSideProps(){
   const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
-  let items = [];
-  try {
-    const res = await fetch(base + '/api/listings');
-    if(res.ok) items = await res.json();
-  } catch {}
+  const res = await fetch(base + '/api/listings').catch(()=>null);
+  let items = []; if(res && res.ok) items = await res.json();
   return { props: { items } };
 }
 
@@ -38,4 +35,6 @@ export default function Home({ items }){
       </div>
     </Layout>
   );
+}
+
 }
