@@ -1,15 +1,16 @@
-// components/Layout.js
-export default function Layout({ children }) {
+import Layout from "../../components/Layout";
+import { useRouter } from "next/router";
+
+export default function Listing() {
+  const router = useRouter();
+  const { id } = router.query;
+
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "20px" }}>
-      <header>
-        <h1>Gemora</h1>
-      </header>
-      <main>{children}</main>
-      <footer style={{ marginTop: "40px", textAlign: "center" }}>
-        <p>© {new Date().getFullYear()} Gemora</p>
-      </footer>
-    </div>
+    <Layout>
+      <h2>Product #{id}</h2>
+      <p>Details about this luxurious item will go here.</p>
+    </Layout>
   );
 }
+
 
