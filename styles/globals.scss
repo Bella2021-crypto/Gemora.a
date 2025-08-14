@@ -1,0 +1,30 @@
+:root{--bg:#0b0b0c;--fg:#f7f7f8;--gold:#D4AF37;--muted:#bfbfbf}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+a{color:inherit;text-decoration:none}
+input,button{font:inherit}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.nav{display:flex;align-items:center;gap:16px;padding:12px 24px;border-bottom:1px solid #1f2025;position:sticky;top:0;background:rgba(11,11,12,0.65);backdrop-filter:blur(8px);z-index:10}
+.brand{font-weight:900;letter-spacing:1px;display:flex;align-items:center;gap:10px}
+.btn{background:var(--gold);color:#121212;padding:10px 16px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.card{background:#111216;border:1px solid #1f2025;border-radius:12px;padding:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.banner{position:relative;overflow:hidden;border-radius:16px;margin:24px 0;background:linear-gradient(135deg,rgba(212,175,55,0.1),rgba(255,255,255,0.02));border:1px solid #1f2025}
+.banner-inner{padding:64px 32px;text-align:center}
+.banner h1{font-size:40px;margin:0 0 8px 0;color:var(--gold);font-weight:900}
+.banner p{margin:0;color:var(--muted)}
+.footer{text-align:center;color:var(--muted);font-size:12px;padding:24px;border-top:1px solid #1f2025;margin-top:40px}
+.price{color:var(--gold);font-weight:800}
+.logo svg{width:28px;height:28px}
+.form{display:flex;flex-direction:column;gap:10px}
+input{padding:10px;border-radius:8px;border:1px solid #2a2b31;background:#0f1014;color:var(--fg)}
+label{color:#cfcfcf;font-size:14px}
+.table{width:100%;border-collapse:separate;border-spacing:0 8px}
+.table th{color:#cfcfcf;font-weight:700;text-align:left;padding:8px 12px;border-bottom:1px solid #27282e}
+.table td{padding:12px;background:#0f1014;border:1px solid #1f2025}
+.table tr{border-radius:10px;overflow:hidden}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.kpi .card{display:flex;flex-direction:column;gap:6px}
+.kpi .label{color:#cfcfcf;font-size:12px}
+.kpi .value{font-size:20px;font-weight:900;color:var(--gold)}
