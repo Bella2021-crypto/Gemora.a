@@ -1,17 +1,19 @@
-import { useState } from 'react';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
 
-export default function Login(){
-  const [email,setEmail]=useState(''); const [password,setPassword]=useState(''); const [msg,setMsg]=useState('');
-  async function login(e){ e.preventDefault(); setMsg('User login placeholder.'); }
+export default function Login() {
   return (
     <Layout>
-      <h2>User Login</h2>
-      <form onSubmit={login} className="card form" style={{maxWidth:420}}>
-        <label>Email</label><input value={email} onChange={e=>setEmail(e.target.value)} required />
-        <label>Password</label><input type="password" value={password} onChange={e=>setPassword(e.target.value)} required />
-        <button className="btn" style={{marginTop:8}}>Login</button>
-        <div style={{marginTop:8,color:'#bfbfbf'}}>{msg}</div>
+      <h2>Login</h2>
+      <form style={{ maxWidth: "400px", margin: "20px auto" }}>
+        <label>Email:</label>
+        <input type="email" style={{ width: "100%", padding: "10px", margin: "10px 0" }} />
+
+        <label>Password:</label>
+        <input type="password" style={{ width: "100%", padding: "10px", margin: "10px 0" }} />
+
+        <button style={{ background: "#a67c52", color: "white", padding: "10px 15px", border: "none" }}>
+          Login
+        </button>
       </form>
     </Layout>
   );
