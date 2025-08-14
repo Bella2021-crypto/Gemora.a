@@ -2,6 +2,7 @@ import Layout from '../../components/Layout';
 
 export async function getServerSideProps({ params }){
   const id = parseInt(params.id, 10);
+  // Use same sample as api/listings
   const items = [
     { id: 1, title: 'Chanel Classic Flap', price_cents: 1250000, image_url: '/logo.svg', description: 'Timeless medium lambskin.' },
     { id: 2, title: 'Rolex Datejust 36', price_cents: 3200000, image_url: '/logo.svg', description: 'Oystersteel and yellow gold.' },
@@ -26,3 +27,4 @@ export default function Listing({ item }){
     </Layout>
   );
 }
+
